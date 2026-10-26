@@ -1,7 +1,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",
-	"name": "level-construction",
+	"name": "levels-construction",
 	"compatibility_date": "2026-10-26",
 	"compatibility_flags": [
 		"nodejs_compat",
@@ -17,6 +17,7 @@
 			// see https://opennext.js.org/cloudflare/caching
 			"binding": "WORKER_SELF_REFERENCE",
 			"service": "levels-construction"
+			
 		}
 	],
 	"images": {
