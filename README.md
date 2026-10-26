@@ -37,6 +37,7 @@ This project runs on Cloudflare Workers through [vinext](https://vinext.dev). `n
 
 - Node.js **22.23.2** (pinned in `.node-version` and `.nvmrc`). Older 22.x releases cannot load `cloudflare.config.ts`, and `cf` does not support Node 24.21.0.
 - npm **11.14.0** (pinned with the `packageManager` field, matching the version that wrote `package-lock.json`).
+- The project `.npmrc` sets `legacy-peer-deps=false`. Do not regenerate the lockfile with `--legacy-peer-deps`: `react-server-dom-webpack` requires `webpack` as a peer, and omitting it makes `npm ci` fail on Cloudflare even though it installs locally.
 
 ```bash
 nvm use            # or: fnm use
