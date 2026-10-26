@@ -29,8 +29,42 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy to Cloudflare Workers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project runs on Cloudflare Workers through [vinext](https://vinext.dev). `next build` is still available for local use, but Cloudflare builds must use the Vite/vinext pipeline.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Requirements
+
+- Node.js **22.23.2** (pinned in `.node-version` and `.nvmrc`). Older 22.x releases cannot load `cloudflare.config.ts`, and `cf` does not support Node 24.21.0.
+- npm **11.14.0** (pinned with the `packageManager` field, matching the version that wrote `package-lock.json`).
+
+```bash
+nvm use            # or: fnm use
+npm ci
+```
+
+### Cloudflare Workers Builds (Git integration)
+
+In the Worker's **Settings → Build → Build Configuration**, use:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build:vinext` |
+| Deploy command | `npm run deploy:vinext:prebuilt` |
+
+The default `npm run build` runs `next build`, and the default `npx wrangler deploy` cannot read vinext's Cloudflare Build Output, so neither can be used for this project.
+
+Add these to **Settings → Build → Variables and Secrets**:
+
+- `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` — needed at build time and runtime.
+- `RESEND_API_KEY` — runtime secret for the contact form.
+
+### Local / CLI deployment
+
+```bash
+npx cf auth login            # or set CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID
+npm run build:vinext
+npm run deploy:vinext        # builds and deploys in one step
+```
+
+The Response Store cache runs in self-contained mode inside this Worker, so there is no separate cache Worker to deploy; `cf deploy` creates the `level-construction-response-store-cache-bodies` R2 bucket on first deployment.
