@@ -9,7 +9,8 @@ export async function POST(request: Request) {
   try {
     const { data, error } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: ["gitoshmbae@gmail.com"],
+      to: ["devlevelslimited@gmail.com"],
+      // to: ["gitoshmbae@gmail.com"],
       // to: ["info@levelservices.biz"],
       // bcc:["gitoshmbae@gmail.com"],
       subject: "New Contact Inquiry",
