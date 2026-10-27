@@ -8,11 +8,12 @@ export async function POST(request: Request) {
   
   try {
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["devlevelslimited@gmail.com"],
+      // from: "Acme <onboarding@resend.dev>",
+      from: "info@levelservices.biz",
+      to: ["devlevelslimited@gmail.com","info@levelservices.biz"],
       // to: ["gitoshmbae@gmail.com"],
       // to: ["info@levelservices.biz"],
-      // bcc:["gitoshmbae@gmail.com"],
+      bcc:["gitoshmbae@gmail.com"],
       subject: "New Contact Inquiry",
       react: ContactUsTemplate({
         fullName: `${fullName}`,
