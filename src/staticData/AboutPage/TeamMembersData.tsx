@@ -34,7 +34,7 @@ where he drives strategy, team development and execution culture to scale operat
     image: "",
     postition: "Operations Director",
     profileDescription: `Michael Mwangi is an experienced Civil Engineer with 10+ years in full cycle construction project planning
-and design of multi million KES projects across the LPG/energy, petroleum and edible oils,
+and design of multi million KES projects across the LPG/Energy, petroleum and edible oils,
 telecommunications, power and infrastructure sectors.
 Currently, Michael serves as Operations Director at Level service Ltd, leading to end-to-end delivery of LPG
 infrastructure projects`,

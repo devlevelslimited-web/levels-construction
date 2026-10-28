@@ -17,7 +17,7 @@ export default function ProjectImageCarousel({ images }: { images: string[] }) {
                 width={800}
                 alt="project image"
                 // classNames="object-cover bg-center md:rounded-l-md w-full h-[70dvh] 2xl:h-[55dvh]"
-                classNames="object-cover object-center rounded-t-md md:rounded-t-none md:rounded-l-md w-full bg-teal-100 min-h-[75dvh] lg:h-[80dvh] 2xl:h-[85dvh]"
+                classNames="object-cover object-center rounded-t-md md:rounded-t-none md:rounded-l-md w-full bg-teal-100 min-h-[75dvh] md:h-[90dvh] lg:h-[80dvh] 2xl:h-[85dvh]"
               />
             </CarouselItem>
           ))}

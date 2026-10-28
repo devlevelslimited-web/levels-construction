@@ -4,7 +4,7 @@ import ImageView from "./NextCloudinary/ImageView";
 export default function WhatsappChat() {
   return (
     <>
-    <div className="fixed bottom-10 right-2 lg:right-20 ">
+    <div className="fixed bottom-10 right-2 lg:right-20 z-30 ">
         {/* <a href="https://wa.me/254728095505" target="_blank" rel="noopener noreferrer"> */}
         <a href="https://wa.me/254111374343" target="_blank" rel="noopener noreferrer">
         <ImageView

@@ -52,7 +52,7 @@ export default function HeroSection() {
 
         {/* Foreground content */}
         <div className="relative z-20 container mx-auto flex min-h-[80dvh] items-center px-4 py-10">
-          <div className="max-w-5xl  space-y-6 text-slate-50">
+          <div className="max-w-5xl mx-auto  space-y-6 text-slate-50">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold">
               Expert Construction Solutions for Kenya&apos;s Leading Industries
             </h1>

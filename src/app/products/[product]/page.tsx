@@ -32,7 +32,7 @@ export default async function page({
                 classNames="object-contain h-96 w-full bg-teall-50 hover:bg-teall-50 rounded-lg p-1"
               />
             </div>
-            <div className="w-full md:w-6/12 ml-auto bg-teal-50 h-full min-h-[52dvh]">
+            <div className="w-full md:w-6/12 ml-auto bg-teal-50 h-full md:min-h-[58dvh] lg:min-h-[52dvh]">
               <p className="text-sm pl-4 font-semibold hidden">About:</p>
               <p className="leading-7 ml-6 px-4 hidden">{Item.details}</p>
               <p className="text-lg pl-4 font-semibold mt-10 -mb-5">
@@ -42,7 +42,7 @@ export default async function page({
                 className="py-8 px-4 prose prose-ul:list-disc prose-li:list-item leading-7 "
                 dangerouslySetInnerHTML={{ __html: Item.moreDetails }}
               ></div>
-              <div className="px-4">
+              <div className="px-4 pb-8">
                 <Link href={`https://wa.me/254111374343?text=Product%20inqury%20for%20%20${Item.model}`} target="_blank">
                   <Button variant="outline" className="w-40 text-lg hover:bg-teal-200">Inquire
                     <ImageView

@@ -61,14 +61,17 @@ export default function Team() {
                     <AccordionTrigger className="font-semibold hover:no-underline">
                       Areas of Expertise:
                     </AccordionTrigger>
-                    <div className="grid grid-cols-2">
+                    <div className="grid grid-cols-1 lg:grid-cols-2">
                       {member.expertise.map((strength) => (
                         <AccordionContent
                           key={strength}
-                          className="ml-2 md:ml-10 flex items-center gap-2"
+                          // className="ml-2 md:ml-10 flex items-center gap-2"
+                          className="ml-2 md:ml-10 grid grid-cols-12 items-center gap-1"
                         >
-                          <FileCheck size={10} className="text-teal-300" />{" "}
+                          <FileCheck size={10} className=" block col-span-1 text-teal-300" />{" "}
+                          <span className="block col-span-11">
                           {strength}
+                          </span>
                         </AccordionContent>
                       ))}
                     </div>
@@ -82,10 +85,13 @@ export default function Team() {
                     {member.academics.map((strength) => (
                       <AccordionContent
                         key={strength}
-                        className="ml-2 md:ml-10 flex items-center gap-2"
+                        // className="ml-2 md:ml-10 flex items-center gap-2"
+                        className="ml-2 md:ml-10 grid grid-cols-12  items-center gap-1"
                       >
-                        <BookCheckIcon size={10} className="text-teal-300" />{" "}
-                        {strength}
+                        <BookCheckIcon size={10} className="block col-span-1 text-teal-300" />{" "}
+                        <span className="block col-span-11 xl:-ml-8">
+                          {strength}
+                        </span>
                       </AccordionContent>
                     ))}
                   </AccordionItem>
