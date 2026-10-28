@@ -144,6 +144,7 @@ export const products = [
     {
       id: 1,
       title: "Nozzle",
+      model:"JQQ-K-LPG-2.2-3.1 3 nails type nozzle",
       imagSrc: "3_Nails_type_mwiof9",
       price: 0,
       details:
@@ -160,6 +161,7 @@ export const products = [
     {
       id: 2,
       title: "Nozzle",
+      model:"JQQ-K-LPG-2.2-4.2 4 nails type nozzle",
       imagSrc: "4_Nails_type_gjmyt0",
       price: 0,
       details:
@@ -175,6 +177,7 @@ export const products = [
     {
       id: 3,
       title: "4 Nails Lock Type",
+      model:" JQQ-K-LPG-2.2-4.2 4nails type",
       imagSrc: "4_Nails_lock_type_ze9zd9",
       price: 0,
       details:
@@ -191,6 +194,7 @@ export const products = [
     {
       id: 4,
       title: "LPG Nozzle Holder ",
+      model:"LPG Nozzle Holder",
       imagSrc: "LPG_nozzle_holder_hqgqym",
       price: 0,
       details:
@@ -204,6 +208,7 @@ export const products = [
     {
       id: 5,
       title: "LPG Vane Pump ",
+      model:"LPG Vane Pump",
       imagSrc: "LPG_vane_pump_d8isgb",
       price: 0,
       details: "Revolutionize your LPG management with Level Services cutting-edge LPG Control Panel.",
@@ -222,6 +227,7 @@ export const products = [
     {
       id: 6,
       title: "LPG Flowmeter",
+      model:"LPG Flowmeter",
       imagSrc: "LPG_flowmeter_civ8rz",
       price: 0,
       details:
@@ -239,7 +245,8 @@ export const products = [
     },
     {
       id: 7,
-      title: "LPG TCS Flowmeter ",
+      title: "LPG TCS Flowmeter",
+      model:"LPG TCS Flowmeter",
       imagSrc: "LPG_TCS_flowmeter_sqwudt",
       price: 0,
       details:
@@ -256,7 +263,8 @@ export const products = [
     },
     {
       id: 8,
-      title: " LPG Discharge Pump",
+      title: "LPG Discharge Pump",
+      model:"LPG Discharge Pump",
       imagSrc: "LPG_discharge_pump_xfsmij",
       price: 0,
       details: "Get quality polyethylene LPG piping is designed to withstand the demands of industrial and commercial applications.",
@@ -274,6 +282,7 @@ export const products = [
     {
       id: 9,
       title: "LPG Seperator",
+      model:"LPG Seperator",
       imagSrc: "LPG_SEPERATOR_svyvef",
       price: 0,
       details:
@@ -291,6 +300,7 @@ export const products = [
     {
       id: 10,
       title: "Solenoid valve Type 1",
+      model:"Solenoid valve Type 1",
       imagSrc: "Solenoid_valve_Type_1_tjejmf",
       price: 0,
       details:
@@ -309,6 +319,7 @@ export const products = [
     {
       id: 11,
       title: "Solenoid valve Type 2",
+      model:"Solenoid valve Type 2",
       imagSrc: "Solenoid_valve_Type_2_hzwln6",
       price: 0,
       details:
@@ -326,6 +337,7 @@ export const products = [
     {
       id: 12,
       title: "Break Away Valve",
+      model:"Break Away Valve",
       imagSrc: "Break_away_valve_tat2h7",
       price: 0,
       details:
@@ -340,7 +352,8 @@ export const products = [
     },
     {
       id: 13,
-      title: "LPG Bypass Valve ",
+      title: "LPG Bypass Valve",
+      model:"LPG Bypass Valve",
       imagSrc: "LPG_Bypass_valve_ieiyqo",
       price: 0,
       details:
@@ -354,6 +367,7 @@ export const products = [
     {
       id: 14,
       title: "LPG Safety Valve",
+      model:"LPG Safety Valve",
       imagSrc: "LPG_safety_valve_ukmopu",
       price: 0,
       details:
@@ -368,6 +382,7 @@ export const products = [
     {
       id: 15,
       title: "LPG Differential Valve",
+      model:"LPG Differential Valve",
       imagSrc: "LPG_differential_valve_w9gqcm",
       price: 0,
       details:
@@ -386,6 +401,7 @@ export const products = [
     {
       id: 16,
       title: "LPGP-65",
+      model:"LPGP-65",
       imagSrc: "LPGP-65_vecmgh",
       price: 0,
       details:
@@ -403,6 +419,7 @@ export const products = [
     {
       id: 17,
       title: "LPGP-85",
+      model:"LPGP-85",
       imagSrc: "LPGP-85_loryye",
       price: 0,
       details:
@@ -421,6 +438,7 @@ export const products = [
     {
       id: 18,
       title: "LPGP-150",
+      model:"LPGP-150",
       imagSrc: "LPGP-150_ztyz7f",
       price: 0,
       details:
@@ -439,6 +457,7 @@ export const products = [
     {
       id: 19,
       title: "LPGP-2000",
+      model:"LPGP-2000",
       imagSrc: "LPGP-2000_k2pcpt",
       price: 0,
       details:
@@ -461,6 +480,7 @@ export const products = [
     {
       id: 20,
       title: "Bypass Valve",
+      model:"Bypass Valve",
       imagSrc: "Bypass_Valve_nbubau",
       price: 0,
       details:
@@ -475,6 +495,7 @@ export const products = [
     {
       id: 21,
       title: "LPG YQB3-5",
+      model:"LPG YQB3-5",
       imagSrc: "LPG_QB3-5_rh0fe5",
       price: 0,
       details:

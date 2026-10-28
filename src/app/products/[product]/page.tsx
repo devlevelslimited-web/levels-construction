@@ -1,4 +1,5 @@
 import ImageView from "@/components/NextCloudinary/ImageView";
+import { Button } from "@/components/ui/button";
 import { products } from "@/staticData/ProductsPage/Products";
 
 import Link from "next/link";
@@ -41,6 +42,19 @@ export default async function page({
                 className="py-8 px-4 prose prose-ul:list-disc prose-li:list-item leading-7 "
                 dangerouslySetInnerHTML={{ __html: Item.moreDetails }}
               ></div>
+              <div className="px-4">
+                <Link href={`https://wa.me/254111374343?text=Product%20inqury%20for%20%20${Item.model}`} target="_blank">
+                  <Button variant="outline" className="w-40 text-lg hover:bg-teal-200">Inquire
+                    <ImageView
+                            imageSrc="whatsapp-transparent-icon"
+                            height={40}
+                            width={40}
+                            alt="whatsapp icon"
+                            classNames="object-cover hover:scale-105 hover:cursor-pointer duration-300 ease-in"
+                            />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         ) : null}
