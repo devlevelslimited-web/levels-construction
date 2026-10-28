@@ -243,7 +243,6 @@ export const projects = [
       "Electrical & Instrumentation: Installation of power distribution systems, hazardous-area compliant electrical equipment, earthing and bonding systems, emergency shutdown systems (ESD), level gauges, and associated instrumentation.",
       "Safety Systems & Compliance: Installation of firefighting equipment, gas detection systems, safety signage, hazard markings, and implementation of statutory safety requirements in accordance with applicable LPG regulations.",
       "Testing, Commissioning & Documentation: Pressure testing, leak testing, functional testing of mechanical and electrical systems, operator training, preparation of as-built documentation, and commissioning for operational readiness. ",
-      "",
       // "Civil engineering: tank structure, pump house & pavement work",
       // "Mechanical installation of 1 x 4.5MT LPG tank, fuel piping, regulators & valves",
       // "Electrical works including earthing and instrumentation",
