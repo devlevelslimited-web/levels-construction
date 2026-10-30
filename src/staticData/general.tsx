@@ -14,7 +14,7 @@ export  const companySocialLinks=[
     {
         id:3,
         name:"linkedin",
-        href:"https://www.linkedin.com/in/john-wachira-11598543/",
+        href:"https://www.linkedin.com/company/level-services-ltd/",
         iconImage:"linkedin_1",
     },
 ]
