@@ -62,6 +62,7 @@ export default function HeroSection() {
               unwavering commitment to quality, safety, and timely delivery
               ensures your projects are completed to the highest standards
             </p>
+            <div className="flex flex-wrap items-center gap-8">
             <Link href="/contact-us">
               <Button
                 size="lg"
@@ -70,9 +71,21 @@ export default function HeroSection() {
                 Get In Touch
               </Button>
             </Link>
+            <Link href="/products">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-teal-5000 px-12 py-8  text-xl text-slate-100 hover:bg-teal-200 hover:text-black hover:scale-105"
+              >
+                View Products
+              </Button>
+            </Link>
+
+            </div>
           </div>
         </div>
       </section>
     </>
   );
 }
+            
