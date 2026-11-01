@@ -66,7 +66,7 @@ export default function HeroSection() {
             <Link href="/contact-us">
               <Button
                 size="lg"
-                className="bg-teal-500 px-12 py-8  text-xl text-slate-100 hover:bg-teal-400 hover:text-black hover:scale-110"
+                className="bg-teal-500 px-12 py-8  text-xl text-slate-100 hover:bg-teal-400 hover:text-black hover:scale-110 hover:cursor-pointer"
               >
                 Get In Touch
               </Button>
@@ -75,9 +75,9 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-teal-5000 px-12 py-8  text-xl text-slate-100 hover:bg-teal-200 hover:text-black hover:scale-105"
+                className="bg-teal-5000 px-12 py-8  text-xl text-slate-100 hover:bg-teal-200 hover:text-black hover:scale-105 hover:cursor-pointer"
               >
-                View Products
+                View Equipment
               </Button>
             </Link>
 
