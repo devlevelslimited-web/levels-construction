@@ -13,7 +13,7 @@ export default function AllProcuctsSection() {
         <div className="flex flex-wrap justify-evenly items-start gap-x-1 gap-y-20 ">
           {products.map((product) => (
             <Link
-              href={`products/${product.id}`}
+              href={`equipment/${product.id}`}
               key={product.id}
               className="w-5/12  md:w-3/12 shadow-md hover:shadow-teal-100 rounded-lg pb-10"
               >

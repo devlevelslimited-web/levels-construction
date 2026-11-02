@@ -7,9 +7,9 @@ const url = getCldOgImageUrl({
 });
 
 export const metadata: Metadata = {
-  title: "Products - Level Services Limited",
+  title: "Equipment - Level Services Limited",
   description:
-    "We offer a diverse range of products that meet your needs while adhering to industry specifications and standards.",
+    "We offer a diverse range of equipment that meet your needs while adhering to industry specifications and standards.",
   openGraph: {
     images: {
       width: 1200,

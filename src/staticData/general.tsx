@@ -27,8 +27,8 @@ export const linksOne=[
     },
     {
         id:2,
-        name:"Products",
-        href:"/products",
+        name:"Equipment",
+        href:"/equipment",
     },
     {
         id:3,

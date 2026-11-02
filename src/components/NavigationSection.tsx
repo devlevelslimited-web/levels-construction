@@ -43,8 +43,8 @@ export default function NavigationSection() {
     },
     {
       id: 5,
-      title: "Products",
-      hrefLink: "/products",
+      title: "Equipment",
+      hrefLink: "/equipment",
     },
     {
       id: 6,

@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://levelservices.biz/products',
+      url: 'https://levelservices.biz/equipment',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

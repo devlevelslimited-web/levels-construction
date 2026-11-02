@@ -7,12 +7,12 @@ import Link from "next/link";
 export default async function page({
   params,
 }: {
-  params: Promise<{ product: string }>;
+  params: Promise<{ equipment: string }>;
 }) {
-  const { product } = await params;
-  const Item = products.find((item) => item.id == parseInt(product));
+  const { equipment } = await params;
+  const Item = products.find((item) => item.id == parseInt(equipment));
 
-  const productItems=products.filter((item)=>item.id!==parseInt(product))
+  const productItems=products.filter((item)=>item.id!==parseInt(equipment))
   // const relatedProducts = products.slice(0, 5);
   const relatedProducts = productItems.sort(()=>0.5-Math.random()).slice(0,5);
 
@@ -63,7 +63,7 @@ export default async function page({
           <div className="flex flex-wrap justify-evenly items-start gap-x-2 gap-y-20">
             {relatedProducts.map((product) => (
               <Link
-                href={`/products/${product.id}`}
+                href={`/equipment/${product.id}`}
                 key={product.id}
                 className="w-5/12 md:w-3/12 lg:w-2/12"
               >
