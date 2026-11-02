@@ -57,86 +57,74 @@ export default function NavigationSection() {
     <>
       <NavigationMenu className="hidden lg:block">
         {/* <NavigationMenuList className="w-[99vw] bg-white flex  justify-between items-center px-1 lg:px-16 "> */}
-        <NavigationMenuList className="w-full md:w-screen 7xl:max-w-7xl ml-auto  bg-white flex justify-between items-center px-4 lg:px-16 ">
-          {/* <div className="w-full p-2"> */}
-          <div className="flex-1 p-2 ">
-            <NavigationMenuItem>
-              <Link href={`/`} className="flex items-center">
-                <ImageView
-                  imageSrc="levels_services_transparent_logo_only_zquhit"
-                  height={400}
-                  width={400}
-                  alt=""
-                  classNames="object-cover size-12 lg:size-20"
-                />
-                <p className="font-semibold">Level Services Limited</p>
-              </Link>
+        <NavigationMenuList className="w-full md:w-screen 7xl:max-w-7xl ml-auto  bg-white flex justify-between items-center gap-x-2 px-4 lg:px-16 ">
+          <NavigationMenuItem className="flex-1 p-2 ">
+            <Link href={`/`} className="flex items-center">
+              <ImageView
+                imageSrc="levels_services_transparent_logo_only_zquhit"
+                height={400}
+                width={400}
+                alt=""
+                classNames="object-cover size-12 lg:size-20"
+              />
+              <p className="font-semibold">Level Services Limited</p>
+            </Link>
+          </NavigationMenuItem>
+          {navLinks.map((nav) => (
+            <NavigationMenuItem key={nav.id} className="shrink-0">
+              <NavigationMenuLink
+                className={`${navigationMenuTriggerStyle()} whitespace-nowrap font-bold hover:bg-teal-100`}
+                asChild
+              >
+                <Link href={nav.hrefLink}>{nav.title}</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
-          </div>
-          {/* <div className=" flex gap-x-2 justify-end w-full"> */}
-          <div className=" flex gap-x-2 justify-end shrink-0">
-            {navLinks.map((nav) => (
-              <NavigationMenuItem key={nav.id}>
-                <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} whitespace-nowrap font-bold hover:bg-teal-100`}
-                  // className={` whitespace-nowrap font-bold hover:bg-teal-100`}
-                  asChild
-                >
-                  <Link href={nav.hrefLink}>{nav.title}</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            ))}
-          </div>
+          ))}
         </NavigationMenuList>
       </NavigationMenu>
       {/* mobile menu */}
       <NavigationMenu className="block lg:hidden">
-        <NavigationMenuList>
-          <div className="w-[99vw] flex justify-between items-center px-1">
-            <div className="c">
-              <NavigationMenuItem>
-                <Link href={`/`} className="flex items-center">
-                  <ImageView
-                    imageSrc="levels_services_transparent_logo_only_zquhit"
-                    height={400}
-                    width={400}
-                    alt=""
-                    classNames="object-contain size-20"
-                  />
-                  <p className="font-semibold text-xs">
-                    Levels Services Limited
-                  </p>
-                </Link>
-              </NavigationMenuItem>
-            </div>
-            <div className="c">
-              <Sheet open={open} onOpenChange={setOpen}>
-                <SheetTrigger>
-                  <MenuSquare className="text-teal-400" />
-                </SheetTrigger>
-                <SheetContent side="top">
-                  <SheetHeader>
-                    <SheetTitle></SheetTitle>
-                    <SheetDescription></SheetDescription>
-                  </SheetHeader>
-                  <div className=" flex flex-col gap-x-2 justify-end items-end list-none text-left pr-10 w-full">
-                    {navLinks.map((nav) => (
-                      <NavigationMenuItem key={nav.id}>
-                        <NavigationMenuLink
-                        onClick={()=>setOpen(false)}
-                          className={`${navigationMenuTriggerStyle()} whitespace-nowrap font-bold hover:bg-teal-100`}
-                          // className={` whitespace-nowrap font-bold hover:bg-teal-100`}
-                          asChild
-                        >
-                          <Link href={nav.hrefLink}>{nav.title}</Link>
-                        </NavigationMenuLink>
-                      </NavigationMenuItem>
-                    ))}
-                  </div>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </div>
+        <NavigationMenuList className="w-[99vw] flex justify-between items-center px-1">
+          <NavigationMenuItem>
+            <Link href={`/`} className="flex items-center">
+              <ImageView
+                imageSrc="levels_services_transparent_logo_only_zquhit"
+                height={400}
+                width={400}
+                alt=""
+                classNames="object-contain size-20"
+              />
+              <p className="font-semibold text-xs">
+                Levels Services Limited
+              </p>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger>
+                <MenuSquare className="text-teal-400" />
+              </SheetTrigger>
+              <SheetContent side="top">
+                <SheetHeader>
+                  <SheetTitle></SheetTitle>
+                  <SheetDescription></SheetDescription>
+                </SheetHeader>
+                <ul className=" flex flex-col gap-x-2 justify-end items-end list-none text-left pr-10 w-full">
+                  {navLinks.map((nav) => (
+                    <li key={nav.id}>
+                      <Link
+                        href={nav.hrefLink}
+                        onClick={() => setOpen(false)}
+                        className={`${navigationMenuTriggerStyle()} whitespace-nowrap font-bold hover:bg-teal-100`}
+                      >
+                        {nav.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </SheetContent>
+            </Sheet>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </>
