@@ -17,6 +17,7 @@ export default function HeroSection() {
             loop={true}
             controls={false}
             playsinline={true}
+            captionsSrc="/captions/hero-background.vtt"
             classNames="w-full h-full object-cover bg-left"
             transformations={{
               crop: "fill",
@@ -37,6 +38,7 @@ export default function HeroSection() {
             loop={true}
             controls={false}
             playsinline={true}
+            captionsSrc="/captions/hero-background.vtt"
             classNames="w-full h-full object-cover bg-left"
             transformations={{
               crop: "fill",

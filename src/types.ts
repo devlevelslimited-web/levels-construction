@@ -5,6 +5,23 @@ export interface ImageProps {
   alt: string;
   classNames: string;
 }
+export type CloudinaryCrop =
+  | "auto"
+  | "crop"
+  | "fill"
+  | "fill_pad"
+  | "fit"
+  | "imagga_crop"
+  | "imagga_scale"
+  | "lfill"
+  | "limit"
+  | "lpad"
+  | "mfit"
+  | "mpad"
+  | "pad"
+  | "scale"
+  | "thumb";
+
 export interface VideoProps {
   videoSrc: string;
   height: number;
@@ -15,8 +32,9 @@ export interface VideoProps {
   controls:boolean;
   playsinline:boolean;
   classNames: string;
+  captionsSrc?: string;
   transformations: {
-    crop: string;
+    crop: CloudinaryCrop;
     aspect: string;
     width: number;
     height: number;

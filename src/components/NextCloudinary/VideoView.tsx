@@ -1,8 +1,7 @@
 "use client";
 
 import { VideoProps } from "@/types";
-import { CldVideoPlayer } from "next-cloudinary";
-import "next-cloudinary/dist/cld-video-player.css";
+import { getCldVideoUrl } from "next-cloudinary";
 
 export default function VideoView({
   videoSrc,
@@ -14,27 +13,50 @@ export default function VideoView({
   playsinline,
   loop,
   controls,
+  captionsSrc,
   transformations,
 }: VideoProps) {
+  const videoUrl = getCldVideoUrl({
+    src: videoSrc,
+    crop: transformations.crop,
+    aspectRatio: transformations.aspect,
+    width: transformations.width,
+    height: transformations.height,
+    quality: "auto",
+    format: "mp4",
+  });
+
+  const posterUrl = getCldVideoUrl({
+    src: videoSrc,
+    crop: "limit",
+    width: 1400,
+    format: "jpg",
+  });
+
   return (
-    <>
-      <CldVideoPlayer
-        src={videoSrc}
-        height={height}
-        width={width}
-        className={classNames}
-        autoplay={autoplay}
-        muted={muted}
-        playsinline={playsinline}
-        loop={loop}
-        controls={controls}
-        transformation={{
-          crop: transformations.crop,
-          aspect: transformations.aspect,
-          width: transformations.width,
-          height: transformations.height
-        }}
-      />
-    </>
+    <video
+      className={classNames}
+      width={width}
+      height={height}
+      poster={posterUrl}
+      autoPlay={autoplay === "always" || autoplay === "true"}
+      muted={muted}
+      loop={loop}
+      playsInline={playsinline}
+      controls={controls}
+      preload="metadata"
+      aria-hidden="true"
+      tabIndex={-1}
+    >
+      <source src={videoUrl} type="video/mp4" />
+      {captionsSrc && (
+        <track
+          kind="captions"
+          src={captionsSrc}
+          srcLang="en"
+          label="English"
+        />
+      )}
+    </video>
   );
 }
