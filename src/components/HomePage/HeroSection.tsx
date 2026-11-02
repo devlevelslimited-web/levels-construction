@@ -73,7 +73,7 @@ export default function HeroSection() {
                 Get In Touch
               </Button>
             </Link>
-            <Link href="/products">
+            <Link href="/equipment">
               <Button
                 size="lg"
                 variant="outline"
